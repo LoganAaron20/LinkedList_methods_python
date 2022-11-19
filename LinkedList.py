@@ -9,9 +9,10 @@ class LinkedList:
     def get_head_node(self):
         return self.head
 
-    def set_head_node(self, node_for_head):
+    def set_head_node(self, node_data):
         if get_head_node() == None: 
-            self.head = node_for_head # Sets the head of the LinkedList to the node passed as an argument
+            new_node = Node(node_data)
+            self.head = new_node # Sets the head of the LinkedList to the node passed as an argument
         else:
             raise ValueError("There is already a head node, please use the set_new_head() method")
 
