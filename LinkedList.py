@@ -43,7 +43,7 @@ class LinkedList:
             starting_node = starting_node.get_next_node()
 
     def set_new_head(self, node_to_set):
-        head_node = get_head_node
+        head_node = get_head_node()
 
         if head_node is not None:
             new_node = Node(node_to_set)
