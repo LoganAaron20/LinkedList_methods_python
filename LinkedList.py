@@ -39,7 +39,7 @@ class LinkedList:
             if starting_node.get_next_node().get_value() == None: # We reached the end of the list
                 new_node = Node(node_to_add)
                 starting_node.set_next_node(new_node)
-                return f'Added {new_node.get_value() to the list'
+                return f'Added {new_node.get_value()} to the list'
             starting_node = starting_node.get_next_node()
 
     def set_new_head(self, node_to_set):
