@@ -77,5 +77,22 @@ def swap_nodes(list, val1, val2):
     node2.set_next_node(temp)
 
 
+def find_2nd_to_last(list):
+    current_node = list.head
+    last_node = None
+
+    while current_node is not None:
+        if current_node.get_next_node() == None:
+            last_node = current_node
+            break
+        current_node = current_node.get_next_node()
+
+    while current_node is not None:
+        if current_node.get_next_node() == last_node:
+            return current_node
+        current_node = current_node.get_next_node()
+
+
 swap_nodes(list_to_swap, 1, 3)
 print(list_to_swap.stringify_list())
+print(find_2nd_to_last(list_to_swap))
